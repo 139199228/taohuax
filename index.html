@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五彩斑斓黑计数按钮</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(45deg, #000, #111, #222, #333, #444, #555);
+        }
+
+        button {
+            padding: 20px 40px;
+            font-size: 24px;
+            background: linear-gradient(45deg, #000, #111, #222, #333, #444, #555);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        #counter {
+            font-size: 36px;
+            color: white;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="countButton">点击计数</button>
+    <span id="counter">0</span>
+    <script>
+        const countButton = document.getElementById('countButton');
+        const counter = document.getElementById('counter');
+        let count = 0;
+
+        countButton.addEventListener('click', () => {
+            count++;
+            counter.textContent = count;
+        });
+    </script>
+</body>
+
+</html>
+    
